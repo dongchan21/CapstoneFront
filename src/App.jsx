@@ -94,7 +94,7 @@ function App() {
     try {
       // 답변과 추천 질문을 동시에 요청
       const [answerResponse, suggestResponse] = await Promise.all([
-        fetch("http://127.0.0.1:8000/answer", {
+        fetch("https://dongchan21-capstone-backend-v2.hf.space/answer", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -104,7 +104,7 @@ function App() {
             user_profile: userProfile, // 사용자 정보 함께 전송
           }),
         }),
-        fetch("http://127.0.0.1:8000/suggest", {
+        fetch("https://dongchan21-capstone-backend-v2.hf.space/suggest", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
